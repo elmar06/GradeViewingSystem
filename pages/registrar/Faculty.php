@@ -70,14 +70,6 @@
           <div class="row">
             <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Member ID</label>
-                  <input type="text" class="form-control" id="member-id">
-                </div>
-            </div>
-          </div> 
-          <div class="row">
-            <div class="col-lg-6">
-                <div class="form-group">
                     <label for="exampleInputEmail1">Firstname</label>
                     <input type="text" class="form-control" id="firstname">
                 </div>

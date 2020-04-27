@@ -1,6 +1,7 @@
 <script >
-$('.mydatatable').DataTable();//Datatable initialization
-
+$(document).ready(function(){
+	$('.mydatatable').DataTable();
+})
 //adding of grade
 //get the student details and show the modal function
 $('.add_grade').on('click', function(){

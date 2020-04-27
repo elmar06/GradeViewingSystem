@@ -132,6 +132,7 @@ $('#assign').on('click', function(){
 //remove the subject from teacher
 $('.remove').on('click', function(){
 	var id = $(this).attr('value');
+  var teacher_id = $('#teacher-id').val();
 
 	$.ajax({
 		type: 'POST',
@@ -140,12 +141,13 @@ $('.remove').on('click', function(){
 
 		success: function(response)
 		{
-			alert(response)
 			if(response > 0)
 			{
 				//get the latest list
 	    		$.ajax({
+            type: 'POST',
 	    			url: '../../control/view_assign_subject.php',
+            data:{id: teacher_id},
 	    			success: function(html)
 	    			{
 	    				$('#tblsubcat-body').html(html);

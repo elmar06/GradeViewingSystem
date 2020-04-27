@@ -6,7 +6,9 @@
 <script src="../../assets/datatables/dataTables.bootstrap4.min.js"></script>
 
 <script >
-   $('.mydatatable').DataTable();
+$(document).ready(function(){
+	$('.mydatatable').DataTable();
+})
 </script>
 </body>
 </html>

@@ -9,7 +9,9 @@
 <script src="../../assets/toastr/toastr.js"></script>
 
 <script >
-$('.mydatatable').DataTable();
+$(document).ready(function(){
+	$('.mydatatable').DataTable();
+})
 </script>
 </body>
 </html>

@@ -58,9 +58,9 @@ function add_member()
 }
 
 //get the member details
-$('.edit').on('click', function(){
+$('.edit').click(function(){
 var id = $(this).attr('value');
-
+alert(id);
     $.ajax({
         type: 'POST',
         url: '../../control/get_member_details.php',
@@ -131,7 +131,7 @@ else
 }
 }
 
-//remove button function
+//remove member button function
 $('.remove').on('click', function(){
 //get the id of user
 var id = $(this).attr('value');

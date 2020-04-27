@@ -22,6 +22,7 @@ while($row = mysqli_fetch_array($get))
         <tr class="btn-success">
           <th>Student ID</th>
           <th>Student Name</th>
+          <th>Day & Time</th>
           <th>School Year</th>
           <th>Midterm</th>
           <th>Final</th>
@@ -30,7 +31,7 @@ while($row = mysqli_fetch_array($get))
     <tbody>
       <?php
         //get all the student enrolled in subjects
-        $get_enrolled = mysqli_query($con, "SELECT tblenrolled.subj_id, tblenrolled.student_id, tblenrolled.enroll_sy, tblstudent.id, tblstudent.std_no_id, CONCAT(tblstudent.std_fn, ' ', tblstudent.std_ln) as 'fullname' FROM tblenrolled, tblstudent WHERE tblenrolled.student_id = tblstudent.id AND tblenrolled.subj_id = '$subj_id'");
+        $get_enrolled = mysqli_query($con, "SELECT tblenrolled.subj_id, tblenrolled.student_id, tblenrolled.enroll_sy, tblstudent.id, tblstudent.std_no_id, CONCAT(tblstudent.std_fn, ' ', tblstudent.std_ln) as 'fullname', tblsubject.subj_time, tblsubject.subj_day FROM tblenrolled, tblstudent, tblsubject WHERE tblenrolled.student_id = tblstudent.id AND tblenrolled.subj_id = tblsubject.subj_id AND tblenrolled.subj_id = '$subj_id'");
         while($row = mysqli_fetch_array($get_enrolled))
         {
           $student_id = $row['student_id'];
@@ -52,7 +53,8 @@ while($row = mysqli_fetch_array($get))
             echo '
             <tr>
               <td>'.$row['std_no_id'].'</td>
-              <td>'.$row['fullname'].'</td>
+              <td>'.$row['fullname'].'</td>            
+              <td>'.$row['subj_day'].' || '.$row['subj_time'].'</td>
               <td>'.$row['enroll_sy'].'</td>
               <td>'.$midterm.'</td>
               <td>'.$final.'</td>

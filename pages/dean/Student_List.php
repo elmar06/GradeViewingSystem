@@ -1,4 +1,4 @@
-<?php include '../../includes/Teacher_Header.php'?>
+<?php include '../../includes/Dean_Header.php'?>
 <div class="container">
   <div class="row" style="margin-left: -100px; margin-right: -100px">
     <!--DATATABLE TEACHER CONTENT START-->
@@ -84,5 +84,4 @@
     </div>
   </div>
 </div>
-<?php include '../../includes/Teacher_Footer.php'?>
-<?php include 'js/student_list-js.php';?>
+<?php include '../../includes/Dean_Footer.php'?>

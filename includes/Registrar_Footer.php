@@ -1,5 +1,5 @@
 <!-- SCRIPTS FOR DATATABLE -->
-<script type="text/javascript" src="../../assets/bootstrap/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../assets/bootstrap/jquery/jquery.js"></script>
 <script type="text/javascript" src="../../assets/bootstrap/popper/popper.min.js"></script>
 <script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- datatables js -->
@@ -10,10 +10,11 @@
 <!-- select2 -->
 <script src="../../assets/select2/js/select2.min.js"></script>
 
-<script >
-  //datatable
-  $('.mydatatable').DataTable();
+<!-- DataTable function -->
+<script>
+$(document).ready(function(){
+	$('.mydatatable').DataTable();
+})
 </script>
-
 </body>
 </html>
