@@ -1,8 +1,8 @@
 <?php
 include '../config/dbcon.php';
 
-$array = implode(',',$_POST['id']);
-$id = $array[0];
+$array = implode($_POST['id']);
+$id = $array;
 
 $query = mysqli_query($con, "SELECT tblfaculty.id as 'mem-id', tblfaculty.firstname, tblfaculty.lastname, tblfaculty.dept_id, tbldepartment.id, tbldepartment.dept_code FROM tblfaculty, tbldepartment WHERE tblfaculty.dept_id = tbldepartment.id AND tblfaculty.id = '$id'");
 
@@ -13,7 +13,7 @@ while ($row = mysqli_fetch_array($query))
 		<div class="form-group row">
             <div class="col-md-6">
             	<label class="control-label col-form-label">Name</label>
-            	 <input id="teacher-id" type="text" class="form-control" value="'.$row['mem-id'].'" hidden>
+            	  <input id="teacher-id" type="text" class="form-control" value="'.$row['mem-id'].'" hidden>
                 <input type="text" class="form-control" value="'.$fullname.'" disabled>
             </div>
             <div class="col-md-6">

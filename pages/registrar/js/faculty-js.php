@@ -202,7 +202,7 @@ function get_teacher_details()
         $.ajax({
             type: 'POST',
             url: '../../control/get_teacher_details.php',
-            data: {id:id},
+            data: {id: id},
             success: function(html)
             {
                 $('#teacherDetailsModal').modal('show');

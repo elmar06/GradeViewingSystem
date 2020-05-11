@@ -10,7 +10,7 @@ $dept_id = $_POST['dept_id'];
 $dept_name = $_POST['dept_name'];
 
 //get the latest id
-$query = mysqli_query($con, "SELECT max(id) + 1 as id FROM tblstudent");
+$query = mysqli_query($con, "SELECT max(id) + 1 as id FROM tblfaculty");
 while ($row = mysqli_fetch_array($query)) 
 {	
 	$id = str_pad($row['id'], 5, "0", STR_PAD_LEFT);
